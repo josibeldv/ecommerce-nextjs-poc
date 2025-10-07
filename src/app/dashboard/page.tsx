@@ -12,7 +12,7 @@ export default async function DashboardPage() {
 
   return (
     <main style={{ padding: 24 }}>
-      <h1>Dashboard CMS</h1>
+      <h1>Mi cuenta</h1>
     </main>
   );
 }
