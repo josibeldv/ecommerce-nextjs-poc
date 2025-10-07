@@ -6,7 +6,7 @@ import { RootState } from "@/store/store";
 import { AppBar, Toolbar, Typography, Button, Stack, Box } from "@mui/material";
 import Link from "next/link";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
-import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import SunnyIcon from "@mui/icons-material/WbSunny";
 import Image from "next/image";
 
 export default function Header() {
@@ -75,7 +75,7 @@ export default function Header() {
                         }}
                         onClick={() => dispatch(toggleDarkMode())}
                     >
-                        {darkMode ? <WbSunnyIcon /> : <BedtimeIcon />}
+                        {darkMode ? <SunnyIcon /> : <BedtimeIcon />}
                     </Button>
                 </Stack>
             </Toolbar>
