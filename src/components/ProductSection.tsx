@@ -1,6 +1,6 @@
 "use client";
 
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import ProductCard from "./ProductCard";
 import { Product } from "@/types/product";
 
@@ -29,14 +29,27 @@ const sampleProducts: Product[] = [
 ];
 
 export default function ProductsSection() {
-    return (
-        <Grid container spacing={4} mt={10} mb={10} justifyContent="center">
-            {sampleProducts.map((product) => (
-                <Grid item xs={12} sm={6} md={4} key={product.id}>
-                    <ProductCard product={product} />
-                </Grid>
-            ))}
-        </Grid>
-    );
+  return (
+    <Grid
+      container
+      spacing={4}
+      justifyContent="center"
+      sx={{ mt: 10, mb: 10 }}
+    >
+      {sampleProducts.map((product) => (
+        <Box
+          key={product.id}
+          sx={{
+            flex: "1 1 300px", // ancho flexible
+            maxWidth: 350,     // ancho máximo por tarjeta
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <ProductCard product={product} />
+        </Box>
+      ))}
+    </Grid>
+  );
 }
 
