@@ -37,7 +37,7 @@ export default function LoginPage() {
             // Redirigir al dashboard
             router.push("/dashboard");
         } catch (err) {
-            setError("Error de conexión!");
+            setError(`Error de conexión ${err}`);
         }
     };
 
